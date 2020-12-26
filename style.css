@@ -1,0 +1,333 @@
+/* ---------------------------------------- */
+/* ==            CODES COMMUNS                */
+/*---------------------------------------- */
+
+@font-face {
+  font-family: "Dayrom";
+  src: url("polices/dayrom.eot");
+  src: url("polices/dayrom.eot?#iefix") format("embedded-opentype"),
+    url("polices/dayrom.woff") format("woff"),
+    url("polices/dayrom.ttf") format("truetype"),
+    url("polices/dayrom.svg#Dayrom") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html,
+body {
+  margin: 0;
+}
+
+#bloc_page {
+  font-family: "Dayrom", arial, sans-serif;
+  width: 90%;
+  margin: auto;
+}
+
+/* ---------------------------------------- */
+/* ==            HEADER                */
+/*---------------------------------------- */
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+  background-color: rgba(78, 149, 173, 0.3);
+  color: white;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+/* ---------------------------------------- */
+/* ==            NAV                      */
+/*---------------------------------------- */
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+}
+
+nav li {
+  margin: 15px;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+}
+
+nav a:hover {
+  border-bottom: 3px solid white;
+}
+
+/* ---------------------------------------- */
+/* ==            slider                    */
+/*---------------------------------------- */
+#slider,
+.wrap,
+.slide-content {
+  width: 100%;
+  height: 60vh;
+  margin: auto;
+  overflow-x: hidden;
+}
+
+.wrap {
+  position: relative;
+  border: 3px solid black;
+  overflow: hidden;
+}
+
+.slide {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.slide1 {
+  background-image: url("images/station_velo2.jpg");
+}
+
+.slide2 {
+  background-image: url("images/station_velo7.jpg");
+}
+
+.slide3 {
+  background-image: url("images/station_velo9.jpg");
+}
+
+.slide-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.slide-content {
+  font-size: 3.5em;
+  color: #fff;
+  background-color: rgba(78, 149, 173, 0.3);
+}
+
+/*BOUTON slider*/
+
+#button_slider {
+  display: flex;
+  justify-content: center;
+}
+
+/* ---------------------------------------- */
+/* ==   conteneur: map+reservation         */
+/*---------------------------------------- */
+
+#conteneur {
+  display: flex;
+  margin-top: 70px;
+}
+
+#mapId {
+  height: 680px;
+  width: 650px;
+  margin-left: 5%;
+}
+
+h2 {
+  text-align: center;
+  font-size: 1.5em;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+}
+
+#booking {
+  width: 40%;
+  height: auto;
+  margin: auto;
+
+  margin-left: 30px;
+}
+
+form {
+  padding-left: 10px;
+  padding-top: 10px;
+  display: none;
+}
+
+/*presentation*/
+#booking_detail {
+  padding: 5%;
+  font-weight: bold;
+  background-color: rgba(78, 149, 173, 0.5);
+  display: none;
+}
+
+#confirmation p {
+  text-align: center;
+  font-weight: bold;
+}
+
+.booking_button {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 5%;
+}
+
+#bikes0available {
+  display: none;
+}
+
+#noAvailableBike {
+  display: none;
+}
+
+/* ---------------------------------------- */
+/* ==            canvas                    */
+/*---------------------------------------- */
+
+#sig-canvas {
+  border: 2px solid black;
+  display: block;
+  margin: auto;
+}
+
+#confirmation_booking {
+  display: none;
+}
+
+/* ---------------------------------------- */
+/* ==            FORMULAIRE                */
+/*---------------------------------------- */
+
+#mistake {
+  display: none;
+  text-align: center;
+  color: red;
+}
+
+#confirmation {
+  display: none;
+}
+
+#inProgress {
+  margin-top: 40px;
+}
+
+#inProgressPara3 {
+  display: none;
+}
+
+/* ---------------------------------------- */
+/* ==            FOOTER                   */
+/*---------------------------------------- */
+
+footer {
+  text-align: center;
+}
+
+/* ---------------------------------------- */
+/* ==            MEDIA QUERIES             */
+/*---------------------------------------- */
+
+@media all and (max-width: 480px) {
+  header {
+    flex-direction: column;
+    justify-content: center;
+  }
+  h1 {
+    margin-left: 15px;
+    font-size: 20px;
+  }
+  .slide-content {
+    font-size: 1em;
+  }
+
+  #conteneur {
+    flex-direction: column;
+  }
+
+  #mapId {
+    height: 300px;
+    width: 90%;
+    margin-bottom: 5%;
+    margin-left: 0%;
+  }
+
+  #booking {
+    width: 90%;
+    margin-left: 0%;
+  }
+
+  #name {
+    margin-bottom: 5%;
+  }
+  #send_form {
+    margin: 5px;
+  }
+}
+
+@media all and (min-width: 481px) and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    justify-content: center;
+  }
+  h1 {
+    margin-left: 15px;
+    font-size: 20px;
+  }
+
+  .slide-content {
+    font-size: 2em;
+  }
+
+  #conteneur {
+    flex-direction: column;
+  }
+
+  #mapId {
+    height: 300px;
+    width: 90%;
+    margin-bottom: 5%;
+  }
+
+  #booking {
+    width: 90%;
+  }
+
+  #form {
+    text-align: center;
+  }
+}
+
+@media all and (min-width: 769px) and (max-width: 1024px) {
+  header {
+    flex-direction: column;
+    justify-content: center;
+  }
+  h1 {
+    margin-left: 15px;
+  }
+  .slide-content {
+    font-size: 2em;
+  }
+
+  #conteneur {
+    flex-direction: column;
+  }
+
+  #mapId {
+    height: 300px;
+    width: 90%;
+    margin-bottom: 5%;
+  }
+
+  #booking {
+    width: 90%;
+  }
+
+  #form {
+    text-align: center;
+  }
+}
